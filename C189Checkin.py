@@ -38,17 +38,14 @@ def main():
     if ("errorCode" in response.text):
         print(response.text)
     else:
-        description = response.json()['description']
+        description = response.json().get['description']
         print(f"抽奖获得{description}")
     response = s.get(url2,headers=headers)
     if ("errorCode" in response.text):
         print(response.text)
     else:
-        if (response.json()['description'])
-            description = response.json()['description']
-            print(f"抽奖获得{description}")
-        else:
-            print(f"已抽奖但数目未知")
+        description = response.json().get['description']
+        print(f"抽奖获得{description}")
 
 BI_RM = list("0123456789abcdefghijklmnopqrstuvwxyz")
 def int2char(a):
