@@ -44,8 +44,11 @@ def main():
     if ("errorCode" in response.text):
         print(response.text)
     else:
-        description = response.json()['description']
-        print(f"抽奖获得{description}")
+        if (response.json()['description'])
+            description = response.json()['description']
+            print(f"抽奖获得{description}")
+        else:
+            print(f"已抽奖但数目未知")
 
 BI_RM = list("0123456789abcdefghijklmnopqrstuvwxyz")
 def int2char(a):
